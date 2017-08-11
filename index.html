@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale-1">
+	<title>Build Your Own Burger</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<h1>Build Your Own Burger</h1>
+	<form name="myForm" action="menu.php" method="post">
+		<h2>Bun</h2>
+			<input type="checkbox" name="Bun" value="Plain" onclick="checkOnly(this)">Plain
+			<input type="checkbox" name="Bun" value="Wholewheat" onclick="checkOnly(this)">Wholewheat
+			<input type="checkbox" name="Bun" value="Sesame Seed" onclick="checkOnly(this)">Sesame Seed
+			<input type="checkbox" name="Bun" value="Portuguese" onclick="checkOnly(this)">Portuguese
+			<input type="checkbox" name="Bun" value="Rye" onclick="checkOnly(this)">Rye
+
+		<h2>Meat</h2>
+			<input type="checkbox" name="Meat" value="Beef" onclick="checkOnly(this)">Beef
+			<input type="checkbox" name="Meat" value="Chicken" onclick="checkOnly(this)">Chicken
+			<input type="checkbox" name="Meat" value="Ostrich" onclick="checkOnly(this)">Ostrich
+			<input type="checkbox" name="Meat" value="Vegetarian" onclick="checkOnly(this)">Vegetarian
+
+		<h2>Topping (Choose 3)</h2>
+			<input type="checkbox" name="Topping" value="Tomato" onclick="checkTopping(this)">Tomato
+			<input type="checkbox" name="Topping" value="Cucumber" onclick="checkTopping(this)">Cucumber
+			<input type="checkbox" name="Topping" value="Cheddar" onclick="checkTopping(this)">Cheddar
+			<input type="checkbox" name="Topping" value="Bacon" onclick="checkTopping(this)">Bacon
+			<input type="checkbox" name="Topping" value="Avocado" onclick="checkTopping(this)">Avocado
+			<input type="checkbox" name="Topping" value="Rocket" onclick="checkTopping(this)">Rocket
+			<input type="checkbox" name="Topping" value="Mushroom" onclick="checkTopping(this)">Mushroom
+			<input type="checkbox" name="Topping" value="Caramalized Onion" onclick="checkTopping(this)">Caramalized Onion 
+			<input type="checkbox" name="Topping" value="Jalapeno" onclick="checkTopping(this)">Jalapeno
+		<h2>Sauce</h2>
+			<input type="checkbox" name="Sauce" value="Mayo"
+			onclick="checkOnly(this)">Mayo
+			<input type="checkbox" name="Sauce" value="Red Wine Reduction" onclick="checkOnly(this)">Red Wine Reduction
+			<input type="checkbox" name="Sauce" value="Mushroom" onclick="checkOnly(this)">Mushroom
+			<input type="checkbox" name="Sauce" value="Pepper" onclick="checkOnly(this)">Pepper
+			<input type="checkbox" name="Sauce" value="Barbeque" onclick="checkOnly(this)">Barbeque </input><br>
+	</form>
+	<a href="#" onclick="getOrder(), totalCost(), unhide(this, 'submitOrder')" value="unhide">Proceed</a>
+	<section>
+		<h2 id="header"></h2>
+		<p id="myOrder"></p>
+		<h2 id="price"></h2>
+		<p id="cost1"></p>
+		<p id="cost2"></p>
+		<h3 id="totalCost"></h3>
+		<a id="submitOrder" class="hidden" href="#">Submit Order</a>
+	</section>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
